@@ -41,8 +41,7 @@ os.makedirs("results", exist_ok=True)
 # k values for AGAT + Random-k baselines
 K_LIST = [0.1, 0.2, 0.3, 0.5]
 
-# ------------------------- GPU Augmentation (Kornia) -------------------------
-# NOTE: Kornia expects tensors in BCHW on the SAME device (GPU here)
+# ------------------------- GPU Augmentation with Kornia-------------------------
 augmentation_gpu = K.AugmentationSequential(
     K.RandomCrop((32, 32), padding=4),
     K.RandomHorizontalFlip(p=0.5),
