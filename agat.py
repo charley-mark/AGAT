@@ -257,7 +257,7 @@ def run():
                 mode=mode,
                 k_frac=k_frac,
                 epoch=epoch,
-                debug=(epoch == 0)
+                debug= False
             )
             epoch_times.append(dt)
 
