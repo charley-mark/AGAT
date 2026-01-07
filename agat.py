@@ -203,7 +203,7 @@ def append_result(row: dict):
     else:
         results = {"config": {}, "runs": []}
 
-    # keep config updated (optional, but useful)
+    # keep config updated
     results["config"] = {
         "epochs": EPOCHS,
         "batch_size": BATCH_SIZE,
