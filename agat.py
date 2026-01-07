@@ -22,7 +22,6 @@ import torchattacks
 from model import ResNet
 from agatdataloader import load_cifar10_data_agat
 
-
 # ------------------------- Reproducibility -------------------------
 seed = 0
 torch.manual_seed(seed)
@@ -30,7 +29,7 @@ np.random.seed(seed)
 random.seed(seed)
 torch.cuda.manual_seed_all(seed)
 torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
+torch.backends.cudnn.benchmark = False 
 
 def seed_worker(worker_id):
     worker_seed = seed + worker_id
