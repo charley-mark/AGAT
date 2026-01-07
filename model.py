@@ -20,7 +20,6 @@ class SimpleCNN(nn.Module):
         x = self.fc2(x)
         return x
 
-
 class ResNet(nn.Module):
     def __init__(self, num_classes=10):
         super(ResNet, self).__init__()
@@ -30,8 +29,6 @@ class ResNet(nn.Module):
 
     def forward(self, x):
         return self.model(x)
-    
-
 
 class PreActBlock(nn.Module):
     '''Pre-activation version of the BasicBlock.'''
@@ -56,7 +53,6 @@ class PreActBlock(nn.Module):
         out = self.conv2(F.relu(self.bn2(out)))
         out += shortcut
         return out
-
 
 class PreActBottleneck(nn.Module):
     '''Pre-activation version of the original Bottleneck module.'''
@@ -84,7 +80,6 @@ class PreActBottleneck(nn.Module):
         out = self.conv3(F.relu(self.bn3(out)))
         out += shortcut
         return out
-
 
 class PreActResNet(nn.Module):
     def __init__(self, depth, out_dim=10, width=None, activation='relu', pretrained=False):
